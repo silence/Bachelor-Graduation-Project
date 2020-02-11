@@ -38,7 +38,7 @@ plt.show()
 '''
 导入所有已标记数据
 '''
-sheets = [i for i in range(39, 41) if i != 2 and i != 3]
+sheets = [i for i in range(1, 41) if i != 2 and i != 3]
 names = locals()
 data_all = pd.DataFrame()
 
@@ -110,4 +110,4 @@ for i in sheets:
     print('第{}个表的数据处理完毕，用时{}s'.format(i, time.time() - start))
     data_all = data_all.append(names.get('data' + str(i)), ignore_index=True)
 
-# data_all.to_csv('data_all.csv')
+data_all.to_csv('data_all.csv')
